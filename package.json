@@ -1,0 +1,24 @@
+{
+  "name": "avbv",
+  "version": "0.0.1",
+  "description": "bilibili.com AV/BV number converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alan-Liang/avbv.git"
+  },
+  "keywords": [
+    "bilibili",
+    "av",
+    "bv"
+  ],
+  "author": "Alan-Liang",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/Alan-Liang/avbv/issues"
+  },
+  "homepage": "https://github.com/Alan-Liang/avbv#readme"
+}
