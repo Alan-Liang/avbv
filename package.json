@@ -1,7 +1,7 @@
 {
   "name": "avbv",
-  "version": "0.0.1",
-  "description": "bilibili.com AV/BV number converter",
+  "version": "0.0.2",
+  "description": "an AV/BV number converter for some website",
   "main": "index.js",
   "scripts": {
     "test": "node test"
@@ -11,7 +11,6 @@
     "url": "git+https://github.com/Alan-Liang/avbv.git"
   },
   "keywords": [
-    "bilibili",
     "av",
     "bv"
   ],
