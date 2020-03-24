@@ -3,8 +3,13 @@ const { toAv, toBv } = require('./core')
 const Av = require('./av'), Bv = require('./bv')
 
 const videos = {
+  2: 'BV1xx411c7mD',
+  7: 'BV1xx411c7m9',
+  114514: 'BV1fx411c7Z8',
   170001: 'BV17x411w7KC',
+  314159: 'BV1gx411F7pF',
   1111111: 'BV1ox411K7kp',
+  3141592: 'BV12s41127if',
   12345678: 'BV1fx411v7eo',
   55553519: 'BV1K4411N7Vw',
   56093550: 'BV1N4411V7Wi',

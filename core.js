@@ -6,7 +6,7 @@ const magicAdd = BigInt('100618342136696320')
 const magicXor = BigInt('177451812')
 const sscMap = 'fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF'
 const sscReverseMap = new Map(Array.from(sscMap).map((c, i) => [ c, BigInt(i) ]))
-const avRegex = /^[Aa]?[Vv]?\d{2,10}$/
+const avRegex = /^[Aa]?[Vv]?\d{1,10}$/
 const bvRegex = new RegExp(`^[Bb][Vv][${sscMap}]{${bvCharmap.length}}$`)
 
 /**
