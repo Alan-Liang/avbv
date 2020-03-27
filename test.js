@@ -2,6 +2,8 @@ const assert = require('assert').equal
 const { toAv, toBv } = require('./core')
 const Av = require('./av'), Bv = require('./bv')
 
+const invalidBv = 'BV1sZ411p7j9'
+
 const videos = {
   2: 'BV1xx411c7mD',
   7: 'BV1xx411c7m9',
@@ -44,4 +46,10 @@ for (let aid in videos) {
     try { fn('notAv') } catch (e) { err = e }
     assert(err && err.code, 'EINVALID_AV', 'should throw EINVALID_AV when passing a non-AV string')
   }
+}
+
+for (const fn of toAvAliases) {
+  let err
+  try { fn(invalidBv) } catch (e) { err = e }
+  assert(err && err.code, 'EAV_NEGATIVE', 'should throw EAV_NEGATIVE when passing invalid bv')
 }

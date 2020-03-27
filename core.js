@@ -2,6 +2,7 @@ const bvStart = 'BV', avStart = 'av'
 const bvCharmap = [ 9, 8, 1, 6, 2, 4, 0, 7, 3, 5 ]
 const bvReverseCharmap = bvCharmap.map((c, i) => [ c, i ]).sort(([ c1 ], [ c2 ]) => c1 - c2).map(([ , i ]) => i)
 const fiftyEight = BigInt('58')
+const zero = BigInt('0')
 const magicAdd = BigInt('100618342136696320')
 const magicXor = BigInt('177451812')
 const sscMap = 'fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF'
@@ -23,6 +24,11 @@ exports.toAv = bv => {
   const innerBv = bv.substring(2)
   const encodedAvNumber = bvCharmap.reduceRight((prev, curr) => prev * fiftyEight + sscReverseMap.get(innerBv[curr]), BigInt(0))
   const avNumber = (encodedAvNumber - magicAdd) ^ magicXor
+  if (avNumber < zero) {
+    const err = new Error('Invalid BV, converted AV is negative')
+    err.code = 'EAV_NEGATIVE'
+    throw err
+  }
   return `${avStart}${avNumber}`
 }
 

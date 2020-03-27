@@ -1,6 +1,6 @@
 {
   "name": "avbv",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "an AV/BV number converter for some website",
   "main": "index.js",
   "scripts": {
